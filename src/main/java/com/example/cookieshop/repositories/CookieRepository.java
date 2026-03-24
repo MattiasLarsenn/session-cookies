@@ -1,42 +1,41 @@
 package com.example.cookieshop.repositories;
 
-import com.example.cookieshop.models.Cookie;
+import com.example.cookieshop.models.Game;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class CookieRepository {
-    //TODO Implement real repository
-    /*This is a test-repository*/
+    /* This is a test-repository */
 
-    public List<Cookie> getAllCookies(){
-        return new ArrayList<Cookie>(
+    public List<Game> getAllGames(){
+        return new ArrayList<Game>(
             Arrays.asList(
-                    new Cookie(1,"Chocolate", 30),
-                    new Cookie(2,"Oatmeal", 15),
-                    new Cookie(3,"Tofu", 20),
-                    new Cookie(4,"Macaroon", 50)
+                    new Game(1,"League Of Legends", 1, "Trash"),
+                    new Game(2,"Dota 2", 10000, "GOAT"),
+                    new Game(3,"Pacman", 20, "OK"),
+                    new Game(4,"CS:GO", 50, "OK")
             )
         );
     }
 
-    public Cookie getCookieById(int id){
-        Cookie cookieToReturn = null;
+    public Game getCookieById(int id){
+        Game gameToReturn = null;
         switch(id){
             case 1 :
-                cookieToReturn = new Cookie(1,"Chocolate", 30);
+                gameToReturn = new Game(1,"League Of Legends", 1, "Trash");
                 break;
             case 2 :
-                cookieToReturn = new Cookie(2,"Oatmeal", 15);
+                gameToReturn = new Game(2,"Dota 2", 10000, "GOAT");
                 break;
             case 3 :
-                cookieToReturn = new Cookie(3,"Tofu", 20);
+                gameToReturn = new Game(3,"Pacman", 20, "OK");
                 break;
             case 4 :
-                cookieToReturn = new Cookie(4,"Macaroon", 50);
+                gameToReturn = new Game(4,"CS:GO", 50, "OK");
                 break;
         }
-        return cookieToReturn;
+        return gameToReturn;
     }
 }

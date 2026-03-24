@@ -19,12 +19,14 @@
         <tr>
           <td>Cookie Type</td>
           <td>Price</td>
+          <td>Quality</td>
           <td>Buy</td>
         </tr>
-            <tr th:each="cookie : ${cookies}">
-            <td th:text="${cookie.getName()}"></td>
-            <td th:text="${cookie.getPrice()}"></td>
-            <td><a class="btn btn-success" th:href="@{/addToBasket(id=${cookie.getId()})}">Add to basket</a></td>
+            <tr th:each="game : ${games}">
+            <td th:text="${game.getName()}"></td>
+            <td th:text="${game.getPrice()}"></td>
+            <td th:text="${game.getQuality()}"></td>
+            <td><a class="btn btn-success" th:href="@{/addToBasket(id=${game.getId()})}">Add to basket</a></td>
         </tr>
     </table>
 </div>

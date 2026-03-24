@@ -1,14 +1,16 @@
 package com.example.cookieshop.models;
 
-public class Cookie {
+public class Game {
     private int id;
     private String name;
     private int price;
+    private String quality;
 
-    public Cookie(int id, String name, int price) {
+    public Game(int id, String name, int price, String quality) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.quality = quality;
     }
 
     public int getId() {
@@ -33,5 +35,9 @@ public class Cookie {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getQuality(){
+        return this.quality;
     }
 }
