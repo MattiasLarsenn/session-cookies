@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CookieRepository {
+public class GameRepository {
     /* This is a test-repository */
 
     public List<Game> getAllGames(){

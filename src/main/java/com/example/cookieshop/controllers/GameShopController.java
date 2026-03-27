@@ -1,6 +1,6 @@
 package com.example.cookieshop.controllers;
 
-import com.example.cookieshop.repositories.CookieRepository;
+import com.example.cookieshop.repositories.GameRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class GameShopController {
-    private CookieRepository repo = new CookieRepository();
+    private GameRepository repo = new GameRepository();
 
     @GetMapping("/")
     public ModelAndView index(HttpSession session){
@@ -37,6 +37,7 @@ public class GameShopController {
         return "redirect:/shop";
     }
 
+    //End-points for demonstration purposes
     @GetMapping("/session-set")
     public ModelAndView setSession(HttpSession session){
         return new ModelAndView("session");
