@@ -10,11 +10,28 @@
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="/">Home</a>
             <a class="navbar-brand" href="/shop">Shop</a>
-            <a class="navbar-brand" href="/basket">Basket</a>
+            <a class="navbar-brand" href="/basket">
+                Basket <span th:text="${'(' + (session.basket != null ? session.basket.size() : 0) + ')'}"></span>
+            </a>
         </nav>
+        <table class="table table-striped table-dark">
+            <tr>
+                <td>Cookie Type</td>
+                <td>Price</td>
+                <td>Quality</td>
+                <td>Remove</td>
+            </tr>
 
-        <tr th:each="game : ${games}">
-        </tr>
+            <tr th:each="game : ${games}">
+                <td th:text="${game.getName()}"></td>
+                <td th:text="${game.getPrice()}"></td>
+                <td th:text="${game.getQuality()}"></td>
+                <td><a class="btn btn-success" th:href="@{/removeFromBasket(id=${game.getId()})}">Remove From Basket</a></td>
+            </tr>
+        </table>
+        <p th:if="${games.isEmpty()}">Basket is empty</p>
+        <p th:if="${!games.isEmpty()}" th:text="${'The total sum will be ' + total}"></p>
+        <a class ="btn btn-danger" th:href="@{/emptyBasket}">Empty Basket</a>
     </div>
 </body>
 </html>

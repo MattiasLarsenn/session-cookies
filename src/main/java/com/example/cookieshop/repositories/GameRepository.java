@@ -9,8 +9,10 @@ import java.util.List;
 public class GameRepository {
     /* This is a test-repository */
 
-    public List<Game> getAllGames(){
-        return new ArrayList<Game>(
+    public List<Game> getAllGames()
+    {
+        return new ArrayList<Game>
+                (
             Arrays.asList(
                     new Game(1,"League Of Legends", 1, "Trash"),
                     new Game(2,"Dota 2", 10000, "GOAT"),
@@ -20,7 +22,8 @@ public class GameRepository {
         );
     }
 
-    public Game getCookieById(int id){
+    public Game getCookieById(int id)
+    {
         Game gameToReturn = null;
         switch(id){
             case 1 :

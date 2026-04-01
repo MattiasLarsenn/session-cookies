@@ -6,38 +6,56 @@ public class Game {
     private int price;
     private String quality;
 
-    public Game(int id, String name, int price, String quality) {
+    public Game(int id, String name, int price, String quality)
+    {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quality = quality;
     }
 
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id)
+    {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public int getPrice() {
+    public int getPrice()
+    {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(int price)
+    {
         this.price = price;
     }
 
-    public String getQuality(){
+    public String getQuality()
+    {
         return this.quality;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quality='" + quality + '\'' +
+                '}';
     }
 }
